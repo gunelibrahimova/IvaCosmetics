@@ -1,0 +1,43 @@
+#header {
+    font-family: Poppins, 'Poppins', sans-serif;
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    img {
+        width: 80px;
+    }
+    ul {
+        li {
+            cursor: pointer;
+            padding-top: 13px;
+            padding-left: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            &.first{
+                color: #EE2D7A;
+            }
+        }
+    }
+    .search {
+        background-color: #F9F9F9;
+        border-radius: 20px;
+        padding: 3px;
+        input {
+            padding-left: 10px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: #F9F9F9;
+        }
+        .search-button{
+            padding: 5px;
+        }
+    }
+    .user{
+        i{
+            padding-left: 35px;
+            font-size: 22px;
+        }
+    }
+}

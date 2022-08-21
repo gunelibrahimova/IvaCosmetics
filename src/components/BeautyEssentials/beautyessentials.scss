@@ -1,0 +1,111 @@
+#beauty {
+    margin-top: 40px;
+
+    .top {
+        margin-bottom: 50px;
+        .image {
+            position: relative;
+            text-align: center;
+
+            img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .text {
+                position: absolute;
+                top: 20%;
+                left: 38%;
+                transform: translateX(-50%, -50%);
+
+                h6 {
+                    color: rgb(238, 45, 122);
+                }
+            }
+        }
+
+    }
+
+    .bottom {
+        .colorBox{
+            .photo {
+                background-color: #B1C6BA;
+                opacity: 0.9;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+                img{
+                    transform: translateY(0px);
+                    transition: 0.3s;
+                    opacity: 1;
+                }
+                &:hover {
+                    border-radius: 5px;
+                    img{
+                        transform: translateY(-20px);
+                    }
+                }
+            }
+            .text{
+                text-align: center;
+                p{
+                    font-size: 17px;
+                    color: grey;
+                }
+            }
+        }
+
+        .colorBox2{
+            .photo {
+                background-color: #B6ABAE;
+                opacity: 0.9;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+                img{
+                    transform: translateY(0px);
+                    transition: 0.3s;
+                    opacity: 1;
+                }
+                &:hover {
+                    border-radius: 5px;
+                    img{
+                        transform: translateY(-20px);
+                    }
+                }
+            }
+            .text{
+                text-align: center;
+                p{
+                    font-size: 17px;
+                    color: grey;
+                }
+            }
+        } .colorBox3{
+            .photo {
+                background-color: #DCCFC4;
+                opacity: 0.9;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+                img{
+                    transform: translateY(0px);
+                    transition: 0.3s;
+                    opacity: 1;
+                }
+                &:hover {
+                    border-radius: 5px;
+                    img{
+                        transform: translateY(-20px);
+                    }
+                }
+            }
+            .text{
+                text-align: center;
+                p{
+                    font-size: 17px;
+                    color: grey;
+                }
+            }
+        }
+       
+
+    }
+}
