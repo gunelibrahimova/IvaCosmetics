@@ -1,0 +1,33 @@
+#beautyy{
+    background-image: url(http://dtiva.wpengine.com/wp-content/uploads/2020/06/section-bgimage4a.jpg);
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px;
+    h6{
+        color: #ED1B6F;
+        font-size: 19px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    p{
+        font-size: 17px;
+        color: #232323;
+    }
+    button{
+        border: 2px solid #EE2D7A;
+        background-color: transparent;
+        color: #EE2D7A;
+        border-radius: 25px;
+        padding: 13px 40px;
+        font-weight: 500;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            color: white;
+            background-color: #EE2D7A;
+        }
+    }
+}

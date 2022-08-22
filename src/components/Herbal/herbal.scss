@@ -1,0 +1,41 @@
+#herbal{
+    .box{
+        padding-bottom: 60px;
+    }
+    .image {
+        position: relative;
+        text-align: center;
+
+        .flovers {
+            width: 110px;
+            height: 110px;
+        }
+
+        .text {
+            position: absolute;
+            
+            top: 20%;
+            left: 25%;
+            transform: translateX(-50%, -50%);
+
+            h6 {
+                color: rgb(238, 45, 122);
+            }
+        }
+        .bottomText{
+            padding-top: 30px;
+            width: 80%;
+            margin: auto;
+            font-family: Poppins, sans-serif;
+            .description{
+                color: rgb(163, 163, 163);
+                font-size: 18px;
+            }
+            .price{
+                font-size: 19px;
+            }
+
+        }
+    }
+
+}
