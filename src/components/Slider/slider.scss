@@ -1,0 +1,154 @@
+#slider {
+    width: 100%;
+    height: 100vh;
+    #app {
+        height: 100%
+    }
+
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image{
+        position: relative;
+        .text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-48%, -48%);
+            h1{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                font-size: 80px;
+            }
+            h3{
+                color: #EE2D7A;
+            }
+            button{
+                background-color: #EE2D7A;
+                border: none;
+                outline: none;
+                border-radius: 25px;
+                padding: 10px 25px;
+                color: white;
+                font-weight: 400;
+            }
+        }
+        .text1{
+            position: absolute;
+            top: 48%;
+            left: 67%;
+            transform: translate(-48%, -48%);
+            .title{
+                font-size: 30px;
+                font-weight: 500;
+            }
+            h1{
+                padding-top: 10px;
+                padding-bottom: 30px;
+                font-size: 60px;
+            }
+            h3{
+                color: #EE2D7A;
+            }
+            button{
+                background-color: #EE2D7A;
+                border: none;
+                outline: none;
+                border-radius: 25px;
+                padding: 10px 25px;
+                color: white;
+                font-weight: 400;
+            }
+        }
+        .text2{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            h1{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                font-size: 60px;
+            }
+            h3{
+                color: #EE2D7A;
+            }
+            button{
+                background-color: #EE2D7A;
+                border: none;
+                outline: none;
+                border-radius: 25px;
+                padding: 10px 25px;
+                color: white;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:hover {
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: block;
+            font-size: 15px;
+        }
+
+
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        color: grey;
+        font-size: 12px;
+        display: none;
+        background-color: white;
+        opacity: 0.7;
+        padding: 20px;
+        margin: 7px;
+        transition: 0.4;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
