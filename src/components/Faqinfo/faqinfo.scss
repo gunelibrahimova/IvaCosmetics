@@ -1,0 +1,60 @@
+#faqinfo{
+    margin-bottom: 100px;
+    font-family: var( --e-global-typography-primary-font-family ), Sans-serif;   
+    .top{
+        h1{
+            font-size: 36px;
+            padding-bottom: 25px;
+        }
+        p{
+            color: grey;
+            font-size: 17px;
+        }
+    }
+    .bottom{
+        .boxes{
+            cursor: pointer;
+            padding: 20px;
+            .box1{
+                i{
+                    background-color: #EE2D7A;
+                    padding: 20px;
+                    border-radius: 52%;
+                    font-size: 25px;
+                    color: white;
+                    transition: 0.3s ease-in-out;
+                }
+                
+            }
+            &:hover{
+                .box1{
+                    i{
+                        background-color: black;
+                    }
+                }
+
+                &:hover{
+                    .box2{
+                        i{
+                            background-color: #EE2D7A;
+                        }
+                    }
+                    
+                }
+              
+            }
+            .box2{
+                i{
+                    padding: 20px;
+                    background-color: black;
+                    border-radius: 52%;
+                    font-size: 25px;
+                    color: white;
+                    transition: 0.3s ease-in-out;
+                }
+              
+            }
+        }
+
+    }
+}

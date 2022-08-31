@@ -1,0 +1,27 @@
+#contact{
+    background-image: url("http://dtiva.wpengine.com/wp-content/uploads/2020/05/breadcrumb-7.jpg");
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.5;
+    .box{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: #ffc1da;
+        opacity: 0.5;
+        .text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            z-index: 9999999;
+        }
+    }
+}

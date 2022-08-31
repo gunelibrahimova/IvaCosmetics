@@ -123,7 +123,6 @@ const Footer = () => {
                     <span>Copyright © 2020, Iva-theme | DesignThemes.</span>
                 </div>
             </div>
-
         </div>
     )
 }
