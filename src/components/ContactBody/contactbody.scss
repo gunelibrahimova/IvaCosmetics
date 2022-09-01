@@ -1,3 +1,129 @@
-#contactBody{
-    background-image: url("http://dtiva.wpengine.com/wp-content/uploads/2020/04/section-bgimage1.jpg");
+#contactBody {
+    position: relative;
+    // background-image: url("");
+
+    width: 100%;
+    padding-bottom: 50px;
+
+    .image {
+        img {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            opacity: 0.6;
+            z-index: -111;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    }
+
+    .top {
+        padding-top: 40px;
+
+        .image2 {
+            position: relative;
+            text-align: center;
+
+            img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .text {
+                position: absolute;
+                top: 20%;
+                left: 42%;
+                transform: translateX(-50%, -50%);
+
+                h6 {
+                    color: rgb(238, 45, 122);
+                }
+            }
+        }
+    }
+
+    .bottom {
+        background-color: white;
+        opacity: 0.9;
+        z-index: 678887887;
+        padding: 70px;
+        position: relative;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 20px 250px;
+            border-radius: 35px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #ED1B6F;
+            }
+        }
+
+        input {
+            padding: 20px 350px 20px 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(212, 212, 212);
+            outline: none;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            }
+        }
+
+        .left {
+            background-color: #FDEFE1;
+            position: absolute;
+            right: -55%;
+            top: 10%;
+            width: 60%;
+            padding: 100px 110px;
+
+            h3 {
+                padding-bottom: 20px;
+            }
+
+            &::after {
+                border: 2px dashed rgba(0, 0, 0, 0.5);
+                content: "";
+                height: auto;
+                margin: 10px;
+                pointer-events: none;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                width: auto;
+                -webkit-transition: all 0.3s linear 0s;
+                transition: all 0.3s linear 0s;
+            }
+
+            p {
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                i {
+                    padding-right: 6px;
+                }
+
+                &:hover {
+                    color: #ED1B6F;
+                }
+            }
+
+        }
+    }
 }
