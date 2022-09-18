@@ -1,0 +1,58 @@
+#authPages{
+    background-color: #F2F2F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: auto;
+    background-image: url("http://dtiva.wpengine.com/wp-content/uploads/2020/06/section-bgimage2b.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    .loginBox{
+        width: 400px;
+        margin: auto;
+        background-color: white;
+        .giris{
+            margin: auto;
+            width: 50%;
+        }
+        .inputBox{
+            padding-bottom: 10px;
+            &.marginBottom{
+                padding-bottom: 30px;
+            }
+            
+            input{
+                padding: 10px 70px;
+                border-radius: 5px;
+                outline: none;
+                background-color: #FAFAFA;
+                border: 1px solid rgb(211, 211, 211);
+            }
+            p{
+                font-size: 15px;
+                color: grey;
+            }
+        }
+        .buttonBox{
+            // text-align: center;
+            button{
+                padding: 10px 150px;
+                border: none;
+                background-color: #EE2D7A;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+        .buttonBoxx{
+            // text-align: center;
+            button{
+                padding: 10px 105px;
+                border: none;
+                background-color: #EE2D7A;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@ const Home = () => {
         <Reveal/>
         <IlluminateBeauty/>
         <Recent/>
-        <Footer/>
+      
     </div>
   )
 }

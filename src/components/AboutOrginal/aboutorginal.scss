@@ -1,0 +1,62 @@
+#aboutoriginal{
+    background-image: url("http://dtiva.wpengine.com/wp-content/uploads/2020/04/section-bgimage2a.png");
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0.6;
+    background-color: #FAE4E1;
+    .box{
+        padding-top: 70px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .image{
+            img{
+                width: 100px;
+                opacity: 1;
+                padding-bottom: 10px;
+                
+            }
+            p{
+                color: #EE2D7A;
+                font-size: 19px;
+                font-weight: 500;
+                opacity: 1;
+            }
+        }
+        .bottom{
+            width: 60%;
+            margin: auto;
+            h1{
+                color: black;
+                span{
+                    color: #EE2D7A;
+                }
+            }
+            p{
+                color: black;
+            }
+            button{
+                border: 2px solid #EE2D7A;
+                background-color: transparent;
+                color: #EE2D7A;
+                border-radius: 25px;
+                padding: 13px 40px;
+                font-weight: 500;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    color: white;
+                    background-color: #EE2D7A;
+                }
+            }
+        }
+    }
+}

@@ -37,11 +37,8 @@ const Reveal = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     )
 }

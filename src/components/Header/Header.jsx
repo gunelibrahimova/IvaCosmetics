@@ -1,6 +1,8 @@
 import React from 'react'
 import './header.scss'
 import ScrollToTop from "react-scroll-to-top";
+import { Link } from 'react-router-dom'
+
 
 const Header = () => {
   return (
@@ -12,13 +14,13 @@ const Header = () => {
                </div>
                <div className="col-lg-5">
                 <ul className='list-unstyled d-flex'>
-                  <li className='first'>Home</li>
-                  <li>About</li>
-                  <li>Collection</li>
-                  <li>Shop</li>
-                  <li>Brand</li>
-                  <li>News</li>
-                  <li>Brand</li>
+                  <li className='first'><Link to="/">Home</Link> </li>
+                  <li> <Link to="/about">About</Link> </li>
+                  <li><Link to="/">Collection</Link> </li>
+                  <li><Link to="/">Shop</Link></li>
+                  <li><Link to="/faq">FAQ</Link></li>
+                  <li><Link to="/news">News</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
                </div>
                <div className="col-lg-3 d-flex">
@@ -32,7 +34,8 @@ const Header = () => {
                </div>
                <div className="col-lg-2">
                <div className="user ">
-                <i class="fa-solid fa-user"></i>
+                <Link to="/auth"><i class="fa-solid fa-user"></i></Link>
+                
                 <i class="fa-solid fa-cart-shopping"></i>
                 <i class="fa-solid fa-heart"></i>
                 </div>

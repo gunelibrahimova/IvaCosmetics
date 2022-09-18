@@ -1,0 +1,1 @@
+export const CHECK_OUT= "CHECK_OUT"
