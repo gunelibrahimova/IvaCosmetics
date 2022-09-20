@@ -51,7 +51,7 @@ $turquoise: #16bcdc;
           font-size: 0.75rem;
           font-weight: 600;
           text-transform: uppercase;
-          color: #4bb633;
+          color: #EE2D7A;
           border: 1px solid;
           padding: 12px 10px 0px 10px;
           cursor: pointer;
@@ -73,7 +73,7 @@ $turquoise: #16bcdc;
     .red {
       margin-top: 10px;
       p {
-        background-color: #e31e24;
+        background-color: #EE2D7A;
         border-radius: 8px 10px 10px 10px;
         padding: 1px 7px;
         color: #fff;
@@ -89,7 +89,7 @@ $turquoise: #16bcdc;
       }
     }
   }
-  .right1 {
+  .addToCart {
     position: relative;
     h4 {
       color: #a6a6a6;
@@ -136,30 +136,45 @@ $turquoise: #16bcdc;
     }
     .sebet {
       margin-left: 20px;
-      color: #636161;
-      border: 1px solid #ddd;
+      color: #EE2D7A;
+      border: 2px solid #EE2D7A;
       font-size: 15px;
       font-weight: 600;
-      padding: 6px 32px 6px 32px;
+      padding: 8px 32px 8px 32px;
       border-radius: 100px;
       width: auto;
       float: left;
       transition: 0.3s ease-in-out;
       cursor: pointer;
       &:hover {
-        border: 1px solid #e31e24;
-        color: #e31e24;
+        border: 1px solid #EE2D7A;
+        color: #EE2D7A;
       }
     }
   }
   .product-meta {
-    font-size: 0.75rem;
+    font-size: 14px;
+    font-weight: bold;
     margin-top: 1.875rem;
-    color: grey;
+    // color: grey;
+    color: black;
+    // .posted_in{
+    //   font-size: 14px;
+    //   font-weight: bold;
+    // }
+    // .tagged_as{
+    //   font-size: 14px;
+    //   font-weight: bold;
+    // }
+    // .sku_wrapper{
+    //   font-size: 14px;
+    //   font-weight: bold;
+    // }
     p {
       display: block;
       font-size: 0.75rem;
-      color: grey;
+      font-weight: 500;
+      // color: grey;
       span {
         color: black;
         background-color: transparent;
@@ -169,11 +184,11 @@ $turquoise: #16bcdc;
     }
   }
   .wislishit {
-    color: #636161;
-    border: 1px solid #ddd;
+    color: #EE2D7A;
+    border: 2px solid #EE2D7A;
     font-size: 15px;
     font-weight: 600;
-    padding: 6px 32px 6px 32px;
+    padding: 8px 32px 8px 32px;
     border-radius: 100px;
     width: auto;
     float: left;
@@ -186,8 +201,8 @@ $turquoise: #16bcdc;
       margin-left: 10px;
     }
     &:hover {
-      border: 1px solid #e31e24;
-      color: #e31e24;
+      border: 1px solid #EE2D7A;
+      color: #EE2D7A;
     }
   }
   .boxess {
@@ -269,7 +284,7 @@ $turquoise: #16bcdc;
             margin-bottom: 20px;
             .cart-btn {
               border-radius: 8px;
-              background: #ef292f;
+              background: #ee2d7a;
               border: 0;
               font-size: 14px;
               line-height: 15px;
@@ -367,4 +382,99 @@ $turquoise: #16bcdc;
       }
     }
   }
+  .boxes {
+    margin-bottom: 50px;
+    .box {
+        overflow: hidden;
+        position: relative;
+        padding: 10px;
+        .mainImage {
+            width: 350px;
+            transform: translateX(0px);
+            transition: 0.3s ease-in-out;
+            vertical-align: middle;
+        }
+
+        .image {
+            img {
+                width: 350px;
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                top: 0%;
+                left: 0%;
+                transform: translateX(300px);
+                transition: 0.3s ease-in-out;
+                vertical-align: middle;
+            }
+        }
+        .sale{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #77A464;
+            padding: 3px 10px;
+            color: white;
+        }
+        .icons{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            i{
+                margin-left: 7px;
+                font-size: 20px;
+                color: white;
+                background-color: #EE2D7A;
+                padding: 5px;
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .text{
+            text-align: center;
+            i{
+                color: #E6B800;
+            }
+            .parag1{
+                font-size: 23px;
+                font-weight: 400;
+            }
+            .parag2{
+                font-size: 18px;
+                .outline{
+                    margin-right: 10px;
+                }
+            }
+        }
+        &:hover {
+            border: 1px solid rgb(238, 45, 122);
+            .icons{
+                i{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+            }
+            .mainImage {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-300px);
+            }
+            .image {
+                img {
+                    transform: translateX(0px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            }
+        }
+    }
+
+
+
+}
 }

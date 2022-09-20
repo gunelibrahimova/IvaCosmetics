@@ -1,6 +1,8 @@
 import { applyMiddleware, combineReducers, createStore } from "@reduxjs/toolkit";
 import { CartReducer } from "./Reducers/CartReducer";
+import { CategoryReducer } from "./Reducers/CategoryReducer";
 import { addCheckOutReducer } from "./Reducers/CheckOutReducer";
+import { FaqReducer } from "./Reducers/FaqReducer";
 import { FavoriesReducer } from "./Reducers/FavoriesReducer";
 import { parametrsReducer } from "./Reducers/ParametrsReducer";
 import { ProductReducers } from "./Reducers/ProductReducer";
@@ -14,7 +16,9 @@ const reducer = combineReducers({
     cart: CartReducer,
     checkout: addCheckOutReducer,
     favories : FavoriesReducer,
-    parametrs : parametrsReducer
+    parametrs : parametrsReducer, 
+    faq : FaqReducer,
+    category : CategoryReducer,
 })
 
 
@@ -34,6 +38,8 @@ const initialState ={
     favories:{favoriesItems:favoriesItemFromLocalStorage},
     checkout: {checkOut: []},
     parametrs: {parametrs: []},
+    faq: {faq : []},
+    category : [],
 }
 
 const middleware = [thunk]

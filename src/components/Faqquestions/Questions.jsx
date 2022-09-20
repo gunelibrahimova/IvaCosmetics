@@ -6,6 +6,9 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import './questions.scss'
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getFaqAction } from '../../redux/Actions/FaqAction';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -50,6 +53,14 @@ export default function Questions() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const { faq } = useSelector((state) => state.faq)
+
+  console.log(faq)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getFaqAction())
+  }, [])
 
   return (
     <div id='questions'>

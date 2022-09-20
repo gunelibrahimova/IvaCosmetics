@@ -46,5 +46,168 @@
             padding-left: 35px;
             font-size: 22px;
         }
+        .cart {
+            margin-top: -3px;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              .box {
+                visibility: visible;
+                opacity: 1;
+                margin-top: 0px;
+              }
+            }
+            .box {
+              border-top: 2px solid #EE2D7A;
+              background-color: white;
+              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+              color: black;
+              width: 550px;
+              position: absolute;
+              top: 60px;
+              right: 0px;
+              z-index: 9999;
+              visibility: hidden;
+              opacity: 0;
+              padding: 20px;
+              transition: 0.3s ease-in-out;
+              margin-top: 10px;
+              .top {
+                .header6 {
+                  font-weight: bold;
+                  font-size: 18px;
+                }
+              }
+  
+              .center {
+                .samsung {
+                  font-size: 15px;
+                }
+  
+                .price {
+                  color: #EE2D7A;
+                  font-size: 18px;
+                }
+              }
+  
+              .bottom {
+                .text {
+                  padding: 10px 0px;
+  
+                  .total {
+                    font-weight: 600;
+                    font-size: 16px;
+                  }
+  
+                  .money {
+                    display: flex;
+                    justify-content: end;
+                    color: #EE2D7A;
+                    font-weight: 600;
+                  }
+                }
+  
+                .buttonDiv {
+                  width: 90%;
+                  margin: auto;
+  
+                  button {
+                    width: 100%;
+                    padding: 10px 0px;
+                    margin: 10px 0px;
+                    border: 1px solid transparent;
+                    outline: none;
+                    font-weight: 600;
+                    transition: 0.3s ease-in-out;
+  
+                    &.view {
+                      background-color: transparent;
+                      border: 1px solid rgb(197, 197, 197);
+                      a{
+                          color: black;
+                          text-decoration: none;
+                      }
+                      &:hover {
+                        background-color: black;
+                        a{
+                          color: white;
+                        }
+                      }
+                    }
+                    &.check {
+                      border: 1px solid rgb(197, 197, 197);
+                      background-color: #EE2D7A;
+                      a {
+                        text-decoration: none;
+                        color: white;
+                      }
+                      &:hover {
+                        color: white;
+                        background-color: black;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
     }
+    .hoverBox {
+      position: relative;
+      cursor: pointer;
+      &:hover{
+          .hoverTextBox{
+              opacity: 1;
+              visibility: visible;
+          }
+      }
+      
+      .hoverTextBox {
+          position: absolute;
+          padding: 10px 50px;
+          top: 100%;
+          right: -100%;
+          background-color: white;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          color: grey;
+          border-radius: 5px;
+          z-index: 99999;
+          opacity: 0;
+          visibility: hidden;
+          .text{
+              font-size: 12px;
+          }
+          .buttonBoxx {
+              padding-bottom: 10px;
+              button {
+                  padding: 5px 40px;
+                  border: none;
+                  background-color: white;
+                  
+                  border: 1px solid #EE2D7A;
+                  border-radius: 5px;
+                  a{
+                      text-decoration: none;
+                      color: #EE2D7A;
+                  }
+              }
+          }
+          .buttonBox {
+              padding-bottom: 10px;
+              button {
+                  padding: 5px 59px;
+                  border: none;
+                  background-color: #EE2D7A;
+                  color: white;
+                  border-radius: 5px;
+                  a{
+                      text-decoration: none;
+                      color: white;
+                  }
+              }
+          }
+      }
+  }
 }

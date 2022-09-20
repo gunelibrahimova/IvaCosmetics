@@ -43,25 +43,24 @@ function Cart() {
             if (cartItems.length > 0) {
               dispach(CheckOutAction(userInfo.id));
               dispach(removeAllCartAction());
-              navigate("/finish");
+              navigate("/checkout");
             }
             else {
               Swal.fire("Səbətiniz boşdur.");
               navigate("/cart");
             }
-          } 
+          }
           else if (
             /* Read more about handling dismissals below */
             result.dismiss === Swal.DismissReason.cancel
-          ) 
-          {
+          ) {
             swalWithBootstrapButtons.fire(
               "Ləğv olundu.",
               "error"
             );
           }
         });
-    } 
+    }
     else {
       Swal.fire({
         icon: "error",
@@ -91,16 +90,16 @@ function Cart() {
   return (
     <div id="cart">
       <div className="container">
-        <h3>Səbətim</h3>
+        <h3>My cart</h3>
         <div className="container">
           <div className="top">
             <table>
               <tr>
-                <th>Şəkil</th>
-                <th>Məhsulun adı</th>
-                <th>Sayı</th>
-                <th>Qiyməti</th>
-                <th>Məbləğ</th>
+                <th>Photo</th>
+                <th>Product Name</th>
+                <th>Count</th>
+                <th>Price</th>
+                <th>Total Price</th>
               </tr>
 
               {cartItems.length > 0 ?
@@ -115,9 +114,9 @@ function Cart() {
                     </td>
                     <td>{product.name}</td>
                     <td>{product.quantity} ədəd</td>
-                    <td>{product.price}₼</td>
+                    <td>{product.price}£</td>
                     <td>
-                      {product.price * product.quantity}₼
+                      {product.price * product.quantity}£
                     </td>
                   </tr>
 
@@ -134,31 +133,31 @@ function Cart() {
                   <div className="col-lg-7">
                     <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                       <button className="shoppingButton">
-                        Alış-verişə davam edin
+                        Continue shopping
                       </button></Link>
                   </div>
                   <div className="col-lg-5">
-                    <h3>Ümumi hesab</h3>
+                    <h3>Total</h3>
                     <table>
                       <tr>
                         <td>
                           <div className="row justify-content-between align-items-center">
-                            <div className="col-lg-8">Məbləğ</div>
-                            <div className="col-lg-4 price"> {totalPrice}₼</div>
+                            <div className="col-lg-8">Price</div>
+                            <div className="col-lg-4 price"> {totalPrice}£</div>
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td>
                           <div className="row justify-content-between align-items-center">
-                            <div className="col-lg-8">Ümumi məbləğ</div>
-                            <div className="col-lg-4 price"> {totalPrice}₼</div>
+                            <div className="col-lg-8">Total price</div>
+                            <div className="col-lg-4 price"> {totalPrice}£</div>
                           </div>
                         </td>
                       </tr>
                     </table>
                     <button onClick={() => addOrder()} >
-                      Sifarişi rəsmiləşdir
+                      Complete the order
                     </button>
                   </div>
                 </div>

@@ -54,21 +54,20 @@ const Reveal = () => {
                         {
                             products &&
                             products.filter(x => x.isSale).map((product) => (
+
                                 <div className="col-lg-3 box">
-                                    
-                                    <img className='mainImage' src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
-                                   
-                                    <div className="image">
-                                        
-                                        {/* <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/Product-Images-jpeg-01.jpg" alt="" /> */}
-                                        
-                                        
-                                    </div>
+                                    <Link to={'/product/' + product.id}>
+                                        <div className="images">
+                                            <img className='mainImage' src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+
+                                            <div className="image">
+
+                                                <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/Product-Images-jpeg-01.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                    </Link>
                                     <div className="sale">
-                                        
-                                        <Link to={'/product/' + product.id}>
                                         <span> Sale</span>
-                                            </Link>
                                     </div>
                                     <div className="icons">
                                         <i class="fa-solid fa-cart-plus" onClick={() => addToCartHadler(product.id, product.name)}></i>

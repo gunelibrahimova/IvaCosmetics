@@ -201,7 +201,7 @@ const ProductDetailBody = () => {
                 <li>
                   <div className="d-flex">
                     <span>
-                      <del>{product.salePrice}</del>
+                      <del> £{product.salePrice}</del>
                     </span>
                     <span style={{ marginLeft: "10px" }}>
                       £ {product.price}
@@ -223,7 +223,7 @@ const ProductDetailBody = () => {
               </div>
             </div>
             <hr />
-            <div className="right1">
+            <div className="addToCart">
               <div className="d-flex">
                 yaninda + - var
                 <div
@@ -405,43 +405,44 @@ const ProductDetailBody = () => {
               <h2>Related products</h2>
             </div>
           </div>
-          <div className="bottom row">
-            {products &&
-              products
-                .filter((x) => x.categoryName == product.categoryName)
-                .map((e) => (
-                  <div key={e.id} className="col-lg-3 containerr">
-                    <Link to={"/product/" + e.id} target="_blank">
-                      <div className="image">
-                        <img
-                          width="100%"
-                          src={`${FILE_PATH}${e.coverPhoto}`}
-                          alt=""
-                        />
-                        <div className="icons">
-                          <i class="fa-solid fa-eye icon"></i>
-                          <br />
-                          <i class="fa-solid fa-heart icon"></i>
-                          <br />
-                          <i class="fa-solid fa-bag-shopping icon"></i>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="text">
-                      <span className="box1 title">{e.categoryName}</span>
-                      <span className="box1 super">{e.name}</span>
+          <div className="boxes">
+                    <div className="row">
+                        {
+                            products &&
+                            products.filter(x => x.isSale).map((product) => (
 
-                      {e.isSale == true ? (
-                        <span className="box1 number">
-                          <del>£{e.price}.00</del> £{e.salePrice}.00
-                        </span>
-                      ) : (
-                        <span className="box1 number">£{e.price}.00</span>
-                      )}
+                                <div className="col-lg-3 box">
+                                    <Link to={'/product/' + product.id}>
+                                        <div className="images">
+                                            <img className='mainImage' src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+
+                                            <div className="image">
+
+                                                <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/Product-Images-jpeg-01.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    <div className="sale">
+                                        <span> Sale</span>
+                                    </div>
+                                    <div className="icons">
+                                        <i class="fa-solid fa-cart-plus" onClick={() => addToCartHadler(product.id, product.name)}></i>
+                                        <i class="fa-solid fa-heart" onClick={() => addToCartHandler(product.id, product.name)}></i>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div className="text">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <p className='parag1'>{product.name}</p>
+                                        <p className='parag2'> <s className='outline'>£{product.price}</s>£{product.salePrice}</p>
+                                    </div>
+                                </div>
+                            ))
+
+                        }
+
                     </div>
-                  </div>
-                ))}
-          </div>
+                </div>
         </div>
       </div>
       <ToastContainer

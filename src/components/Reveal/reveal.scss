@@ -1,6 +1,10 @@
 #reveal {
     z-index: 999999;
     margin-bottom: 50px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
     .top {
         margin-bottom: 50px;
         .image {
@@ -63,7 +67,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 i{
-                    margin-left: 10px;
+                    margin-left: 7px;
                     font-size: 20px;
                     color: white;
                     background-color: #EE2D7A;

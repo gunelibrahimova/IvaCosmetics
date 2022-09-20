@@ -10,6 +10,9 @@ import Home from '../Pages/Home'
 import NewsPages from '../Pages/NewsPages'
 import ProductDetail from '../Pages/ProductDetail'
 import WishListPages from '../Pages/WishListPages'
+import Account from '../components/Account/Account'
+import Shop from '../components/Shop/Shop'
+
 
 
 const MyRouter = () => {
@@ -25,6 +28,8 @@ const MyRouter = () => {
       <Route path='/wishlist' element={<WishListPages />} />
       <Route path='/cart' element={<CartPages />} />
       <Route path='/checkout' element={<CheckOutPage />}/>
+      <Route path='/account' element={<Account />} />
+      <Route path='/shop' element={<Shop />} />
 
     </Routes>
   )
