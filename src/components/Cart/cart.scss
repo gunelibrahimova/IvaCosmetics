@@ -1,0 +1,134 @@
+#cart {
+    h3 {
+        margin: 20px;
+    }
+
+    .top {
+        table {
+            width: 100%;
+            margin-bottom: 40px;
+
+            tr {
+                th {
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                td {
+                    text-align: center;
+
+                    .buttonBox {
+                        border: 1px solid rgb(196, 196, 196);
+                        margin-right: 20px;
+                        padding: 14px 0px;
+
+                        button {
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            padding: 0px 25px;
+                            font-weight: bold;
+                            font-size: 20px;
+                        }
+
+                        .count {
+                            padding: 30px 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom {
+        .top{
+            margin-bottom: 30px;
+            input {
+                padding: 15px 40px 15px 5px;
+                outline: none;
+                border: 1px solid rgb(198, 198, 198);
+            }
+    
+            button {
+                // width: 100%;
+                padding: 15px 45px;
+                margin: 10px 15px;
+                text-align: center;
+                border: 1px solid transparent;
+                outline: none;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+                background-color: #F15795;
+                color: white;
+                
+                 &:hover {
+                    background-color: transparent;
+                    border: 1px solid rgb(197, 197, 197);
+                    color: black;
+                }
+            }
+            .shoppingButton{
+                padding: 15px 45px;
+                margin: 10px 15px;
+                text-align: center;
+                border: 1px solid transparent;
+                outline: none;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+                background-color: #F15795;
+                color: white;
+                
+                 &:hover {
+                    background-color: transparent;
+                    border: 1px solid rgb(197, 197, 197);
+                    color: black;
+                }
+            }
+        }
+        .bottom{
+            padding-bottom: 50px;
+            table{
+                width: 100%;
+
+                tr{
+                    td{
+                        border: 1px solid rgb(187, 187, 187);
+                        padding: 10px;
+                        .price{
+                            justify-content: end;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            button {
+                // width: 100%;
+                padding: 15px 45px;
+                margin: 10px 0px 30px 0px;
+                text-align: center;
+                border: 1px solid transparent;
+                outline: none;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+                background-color: #F15795;
+                color: white;
+                 &:hover {
+                    background-color: transparent;
+                    border: 1px solid #F15795;
+                    color: black;
+                }
+            }
+        }
+       
+    }
+
+    table,
+    th,
+    td,
+    tr {
+        border: 1px solid rgb(199, 199, 199);
+        padding: 30px;
+    }
+}

@@ -3,13 +3,13 @@ import { CartReducer } from "./Reducers/CartReducer";
 import { addCheckOutReducer } from "./Reducers/CheckOutReducer";
 import { FavoriesReducer } from "./Reducers/FavoriesReducer";
 import { parametrsReducer } from "./Reducers/ParametrsReducer";
-import { productReducer } from "./Reducers/ProductReducer";
+import { ProductReducers } from "./Reducers/ProductReducer";
 import { UserReducer } from "./Reducers/UserReducer";
 
 const {default: thunk} = require("redux-thunk")
 
 const reducer = combineReducers({
-    products: productReducer,
+    products : ProductReducers,
     user: UserReducer,
     cart: CartReducer,
     checkout: addCheckOutReducer,

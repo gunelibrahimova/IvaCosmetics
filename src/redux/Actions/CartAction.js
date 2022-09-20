@@ -1,4 +1,4 @@
-import { BASE_URL, FILE_PATH } from "../../api/config"
+import { BASE_URL } from "../../api/config"
 import { ADD_TO_CART, GET_CART_ITEMS, REMOVE_ALL_CART } from './../Constants/CartConstants';
 
 export const addToCartAction = (id,quantity=1) => async (dispach, getState) => {

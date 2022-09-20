@@ -1,0 +1,45 @@
+#checkout{
+    background-image: url("https://cdn.pixabay.com/photo/2020/01/05/20/06/lipstick-4743984_960_720.jpg");
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0.6;
+    background-color: #FAE4E1;
+    .box{
+        padding-top: 100px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        .image{
+            width: 8%;
+            margin: auto;
+            p{
+                color: #EE2D7A;
+                font-size: 16px;
+                opacity: 1;
+                margin-top: 20px;
+            }
+        }
+        .bottom{
+            width: 60%;
+            margin: auto;
+            h1{
+                color: black;
+                font-size: 60px;
+            }
+            p{
+                margin-top: 40px;
+                color: black;
+                font-weight: 600;
+            }
+        }
+    }
+}

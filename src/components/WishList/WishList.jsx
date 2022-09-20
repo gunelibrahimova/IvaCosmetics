@@ -1,28 +1,7 @@
-// import React from 'react'
-// import './wishlist.scss'
-
-// const WishList = () => {
-//   return (
-//     <div id='wishlist'>
-//          <div className="top">
-//                 <div className="image">
-//                     <img width="100%" src="http://dtiva.wpengine.com/wp-content/uploads/2020/05/breadcrumb-1.jpg" alt="" />
-//                 </div>
-//                 <div className="text">
-//                     <h1>News</h1>
-//                     <p>Home - News</p>
-//                 </div>
-//             </div>
-//     </div>
-//   )
-// }
-
-// export default WishList
-
-
 import React, { useContext, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { FILE_PATH } from '../../api/config';
 // import { CartContext } from '../../context/MyContext';
 import { addToCartAction } from '../../redux/Actions/CartAction';
 import { removeFromFavories } from '../../redux/Actions/FavoriesAction';
@@ -95,7 +74,7 @@ const WishList = () => {
                 ? favoriesItems.map((product) => (
                   <tr>
                     <td>
-                      <img width="80px" src={product.img} alt="" />
+                      <img width="80px" src={`${FILE_PATH}${product.img}`} alt="" />
                     </td>
                     <td>{product.name}</td>
                     <td>{product.price}₼</td>

@@ -14,6 +14,9 @@ import TabPanel from "@mui/lab/TabPanel";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCartAction } from "../../redux/Actions/CartAction";
 import { addToFavoriesAction } from "../../redux/Actions/FavoriesAction";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { getProductsAction } from "../../redux/Actions/ProductAction";
 
 const colors = {
   orange: "#FFBA5A",
@@ -33,10 +36,23 @@ const ProductDetailBody = () => {
   const [hoverValue, setHoverValue] = useState(undefined);
   const [value, setValue] = useState("1");
   const { cartItems } = useSelector((state) => state.cart);
-  const  {favoriesItems}  = useSelector((state) => state.favories)
+  const { favoriesItems } = useSelector((state) => state.favories);
   const { products } = useSelector((state) => state.products);
 
   const dispatch = useDispatch();
+
+  const notify = () =>
+    toast(
+      <Link to="/cart" style={{ textDecoration: "none" }}>
+        "Product added to cart !"
+      </Link>
+    );
+  const notifyF = () =>
+    toast(
+      <Link to="/wishlist" style={{ textDecoration: "none", zIndex: "9999999999999999" }}>
+        "Product added to wishlist !"
+      </Link>
+    );
 
   const addToCartHadler = (id, name) => {
     var myCart = cartItems.find((e) => e.id === id);
@@ -47,14 +63,14 @@ const ProductDetailBody = () => {
     }
   };
 
-  const addToCartHandler = (id,name) => {
-    var myCart = favoriesItems.find(e => e.id === id)
+  const addToCartHandler = (id, name) => {
+    var myCart = favoriesItems.find((e) => e.id === id);
     if (myCart) {
-      dispatch(addToFavoriesAction(id, myCart.quantity + 1))
+      dispatch(addToFavoriesAction(id, myCart.quantity + 1));
     } else {
-      dispatch(addToFavoriesAction(id, 1))
+      dispatch(addToFavoriesAction(id, 1));
     }
-  }
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -131,7 +147,7 @@ const ProductDetailBody = () => {
       .then((data) => setProducts(data.message));
   };
   useEffect(() => {
-    // dispatch(getProductsAction());
+    dispatch(getProductsAction());
     getProducts();
   }, [dispatch]);
 
@@ -212,7 +228,10 @@ const ProductDetailBody = () => {
                 yaninda + - var
                 <div
                   className="sebet"
-                  onClick={() => addToCartHadler(product.id, product.name)}
+                  onClick={() => {
+                    addToCartHadler(product.id, product.name);
+                    notify();
+                  }}
                 >
                   <span>ADD TO CART</span>
                 </div>
@@ -231,7 +250,13 @@ const ProductDetailBody = () => {
               </p>
             </div>{" "}
             <hr />
-            <div className="wislishit"  onClick={() => addToCartHandler(product.id, product.name)}>
+            <div
+              className="wislishit"
+              onClick={() => {
+                addToCartHandler(product.id, product.name);
+                notifyF();
+              }}
+            >
               <div className="d-flex">
                 <i class="fa-regular fa-heart"></i>
                 <span>Add to Wishlist</span>
@@ -386,7 +411,7 @@ const ProductDetailBody = () => {
                 .filter((x) => x.categoryName == product.categoryName)
                 .map((e) => (
                   <div key={e.id} className="col-lg-3 containerr">
-                    <Link to={'/product/' + e.id} target="_blank">
+                    <Link to={"/product/" + e.id} target="_blank">
                       <div className="image">
                         <img
                           width="100%"
@@ -405,20 +430,33 @@ const ProductDetailBody = () => {
                     <div className="text">
                       <span className="box1 title">{e.categoryName}</span>
                       <span className="box1 super">{e.name}</span>
-                      
+
                       {e.isSale == true ? (
-                        <span className="box1 number"><del>£{e.price}.00</del> £{e.salePrice}.00</span>
-                        ) : (
-                          <span className="box1 number">£{e.price}.00</span>
-                        )}
-                        
-                      
+                        <span className="box1 number">
+                          <del>£{e.price}.00</del> £{e.salePrice}.00
+                        </span>
+                      ) : (
+                        <span className="box1 number">£{e.price}.00</span>
+                      )}
                     </div>
                   </div>
                 ))}
           </div>
         </div>
       </div>
+      <ToastContainer
+        limit={3}
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
     </div>
   );
 };

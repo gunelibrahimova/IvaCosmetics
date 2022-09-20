@@ -36,8 +36,8 @@ const Header = () => {
                <div className="user ">
                 <Link to="/auth"><i class="fa-solid fa-user"></i></Link>
                 
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-heart"></i>
+                <Link to="/cart"><i class="fa-solid fa-cart-shopping"></i></Link> 
+                <Link to="/wishlist"><i class="fa-solid fa-heart"></i></Link> 
                 </div>
                </div>
             </div>
