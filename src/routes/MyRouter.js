@@ -31,7 +31,7 @@ const MyRouter = () => {
       <Route path='/checkout' element={<CheckOutPage />}/>
       <Route path='/account' element={<Account />} />
       <Route path='/shop' element={<Shop />} />
-      <Route path='/blogDetail' element={<BlogDetail />} />
+      <Route path='/blogDetail/:id' element={<BlogDetail />} />
 
     </Routes>
   )

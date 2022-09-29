@@ -8,6 +8,7 @@ import { parametrsReducer } from "./Reducers/ParametrsReducer";
 import { ProductReducers } from "./Reducers/ProductReducer";
 import { UserReducer } from "./Reducers/UserReducer";
 import {SizeReducer} from "./Reducers/SizeReducer"
+import { BlogReducer } from "./Reducers/BlogReducer";
 
 const {default: thunk} = require("redux-thunk")
 
@@ -20,7 +21,8 @@ const reducer = combineReducers({
     parametrs : parametrsReducer, 
     faq : FaqReducer,
     category : CategoryReducer,
-    size: SizeReducer
+    size: SizeReducer,
+    blog : BlogReducer
 })
 
 
@@ -42,7 +44,8 @@ const initialState ={
     parametrs: {parametrs: []},
     faq: [],
     category : [],
-    size: []
+    size: [],
+    blog : []
 }
 
 const middleware = [thunk]
