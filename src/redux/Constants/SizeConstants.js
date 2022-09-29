@@ -1,0 +1,1 @@
+export const PRODUCT_SIZE = "PRODUCT_SIZE"

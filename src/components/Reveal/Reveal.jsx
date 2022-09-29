@@ -54,7 +54,6 @@ const Reveal = () => {
                         {
                             products &&
                             products.filter(x => x.isSale).map((product) => (
-
                                 <div className="col-lg-3 box">
                                     <Link to={'/product/' + product.id}>
                                         <div className="images">
@@ -82,9 +81,7 @@ const Reveal = () => {
                                     </div>
                                 </div>
                             ))
-
                         }
-
                     </div>
                 </div>
             </div>

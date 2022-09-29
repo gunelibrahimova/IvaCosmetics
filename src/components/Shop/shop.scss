@@ -88,6 +88,103 @@
             }
 
         }
+
+        .boxes {
+            .box {
+                overflow: hidden;
+                position: relative;
+                padding: 10px;
+                margin: 10px;
+                .mainImage {
+                    width: 350px;
+                    transform: translateX(0px);
+                    transition: 0.3s ease-in-out;
+                    vertical-align: middle;
+                }
+    
+                .image {
+                    img {
+                        width: 350px;
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        top: 0%;
+                        left: 0%;
+                        transform: translateX(300px);
+                        transition: 0.3s ease-in-out;
+                        vertical-align: middle;
+                    }
+                }
+                .sale{
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background-color: #77A464;
+                    padding: 3px 10px;
+                    color: white;
+                }
+                .icons{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    i{
+                        margin-left: 7px;
+                        font-size: 20px;
+                        color: white;
+                        background-color: #EE2D7A;
+                        padding: 5px;
+                        border-radius: 50%;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+                .text{
+                    text-align: center;
+                    i{
+                        color: #E6B800;
+                    }
+                    .parag1{
+                        font-size: 23px;
+                        font-weight: 400;
+                    }
+                    .parag2{
+                        font-size: 18px;
+                        .outline{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                &:hover {
+                    border: 1px solid rgb(238, 45, 122);
+                    .icons{
+                        i{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        
+                    }
+                    .mainImage {
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateX(-300px);
+                    }
+                    .image {
+                        img {
+                            transform: translateX(0px);
+                            opacity: 1;
+                            visibility: visible;
+                        }
+    
+                    }
+                }
+            }
+    
+    
+    
+        }
+    
     }
 
 }

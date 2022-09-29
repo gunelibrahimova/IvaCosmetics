@@ -67,39 +67,22 @@ export default function Questions() {
         <div className="text">
             <h1>Common Questions</h1>
         </div>
-
-
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography> <h5>Is there any refund policy if I am not satisfied?</h5>
+      {
+        faq &&
+        faq.map((faq) =>(
+          <Accordion onChange={handleChange('panel1')}>
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+            <Typography> <h5>{faq.title} </h5>
+              </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+             {faq.description}
             </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing passages, and more recently with desktop publishing software like Aldus PageMaker including dummy content data versions.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography><h5>What do I do if I need to cancel an shipment?</h5></Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing passages, and more recently with desktop publishing software like Aldus PageMaker including dummy content data versions.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography><h5>Can I speak by telephone directly with some of your specialists?</h5></Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing passages, and more recently with desktop publishing software like Aldus PageMaker including dummy content data versions.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+          </AccordionDetails>
+        </Accordion>
+        ))
+      }
     </div>
   );
 }

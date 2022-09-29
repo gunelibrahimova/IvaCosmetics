@@ -12,6 +12,7 @@ import ProductDetail from '../Pages/ProductDetail'
 import WishListPages from '../Pages/WishListPages'
 import Account from '../components/Account/Account'
 import Shop from '../components/Shop/Shop'
+import BlogDetail from '../Pages/BlogDetail'
 
 
 
@@ -30,6 +31,7 @@ const MyRouter = () => {
       <Route path='/checkout' element={<CheckOutPage />}/>
       <Route path='/account' element={<Account />} />
       <Route path='/shop' element={<Shop />} />
+      <Route path='/blogDetail' element={<BlogDetail />} />
 
     </Routes>
   )

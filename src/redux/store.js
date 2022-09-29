@@ -7,6 +7,7 @@ import { FavoriesReducer } from "./Reducers/FavoriesReducer";
 import { parametrsReducer } from "./Reducers/ParametrsReducer";
 import { ProductReducers } from "./Reducers/ProductReducer";
 import { UserReducer } from "./Reducers/UserReducer";
+import {SizeReducer} from "./Reducers/SizeReducer"
 
 const {default: thunk} = require("redux-thunk")
 
@@ -19,6 +20,7 @@ const reducer = combineReducers({
     parametrs : parametrsReducer, 
     faq : FaqReducer,
     category : CategoryReducer,
+    size: SizeReducer
 })
 
 
@@ -38,8 +40,9 @@ const initialState ={
     favories:{favoriesItems:favoriesItemFromLocalStorage},
     checkout: {checkOut: []},
     parametrs: {parametrs: []},
-    faq: {faq : []},
+    faq: [],
     category : [],
+    size: []
 }
 
 const middleware = [thunk]

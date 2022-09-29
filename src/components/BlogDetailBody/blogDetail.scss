@@ -1,0 +1,21 @@
+#BlogDetailBody{
+    .boxes{
+        .user{
+            margin-bottom: 20px;
+            text-align: center;
+            span{
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    color: #EE2D7A;
+                }
+            }
+            
+            i{
+                margin-right: 7px;
+                color: #EE2D7A;
+            }
+        }
+    }
+
+}
