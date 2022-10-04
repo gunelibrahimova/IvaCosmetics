@@ -40,10 +40,10 @@ const Header = () => {
     <div id='header'>
       <div className="container">
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-2">
+          <div className="col-lg-2 res-image">
             <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/logo.png" alt="" />
           </div>
-          <div className="col-lg-5">
+          <div className="col-lg-5 res-header">
             <ul className='list-unstyled d-flex'>
               <li className='first'><Link to="/">Home</Link> </li>
               <li> <Link to="/about">About</Link> </li>
@@ -63,8 +63,8 @@ const Header = () => {
             </div>
 
           </div>
-          <div className="col-lg-2">
-            <div className="user d-flex ">
+          <div className="col-lg-2 res-icon">
+            <div className="user d-flex align-items-center">
               <div className="hoverBox">
                 <Link to="/auth"><i class="fa-solid fa-user"></i></Link>
                 <div className="hoverTextBox">
@@ -90,7 +90,7 @@ const Header = () => {
                     ) : (
                       <>
                         <p>{userInfo.name}</p>
-                        <span className="text">Siz artıq hesaba daxil olmusunuz.</span>
+                        <p className="text">Siz artıq hesaba daxil olmusunuz.</p>
                         <hr />
                         <div className="buttonBox">
                           <button><Link to="/account">

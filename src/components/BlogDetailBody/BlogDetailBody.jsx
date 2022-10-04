@@ -20,63 +20,6 @@ import './blogDetail.scss'
 import { getBlogAction } from "../../redux/Actions/BlogAction";
 
 
-// const colors = {
-//     orange: "#FFBA5A",
-//     grey: "#a9a9a9",
-// };
-
-// const BlogDetailBody = () => {
-
-
-//     const { id } = useParams();
-//     const [product, setProducts] = useState([]);
-//     const [photo, setPhoto] = useState([]);
-//     const [count, setCounter] = useState(1);
-//     const [userName, setUserName] = useState("");
-//     const [review, setReview] = useState("");
-//     const [email, setEmail] = useState("");
-//     const stars = Array(5).fill(0);
-//     const [currentValue, setCurrentValue] = useState(0);
-//     const [hoverValue, setHoverValue] = useState(undefined);
-//     const [value, setValue] = useState("1");
-//     const { cartItems } = useSelector((state) => state.cart);
-//     const { favoriesItems } = useSelector((state) => state.favories);
-//     const { products } = useSelector((state) => state.products);
-
-
-
-
-
-//     const handleChange = (event, newValue) => {
-//         setValue(newValue);
-//     };
-//     const handleClick = (value) => {
-//         setCurrentValue(value);
-//     };
-//     const handleMouseOver = (value) => {
-//         setHoverValue(value);
-//     };
-//     const handleMouseLeave = (value) => {
-//         setHoverValue(undefined);
-//     };
-//     const postComment = async () => {
-//         fetch(BASE_URL + "Comment/addcomment", {
-//             headers: {
-//                 Accept: "application/json",
-//                 "Content-Type": "application/json",
-//             },
-//             method: "POST",
-//             body: JSON.stringify({
-//                 userName: userName,
-//                 userEmail: email,
-//                 review: review,
-//                 ratings: currentValue,
-//                 productId: id,
-//             }),
-//         });
-//     };
-
-
 const colors = {
     orange: "#FFBA5A",
     grey: "#a9a9a9",

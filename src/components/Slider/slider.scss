@@ -152,3 +152,78 @@
         object-fit: cover;
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #slider{
+        height: 40vh;
+        .image{
+            img{
+                position: relative;
+                height: 200px;
+            }
+            .text{
+                position: absolute;
+                .text-h3{
+                    font-size: 15px;
+                }
+                .text-h1{
+                    font-size: 17px;
+                }
+                button{
+                    padding: 3px 10px;
+                }
+            }
+            .text1{
+                position: absolute;
+                .text-h3{
+                    font-size: 15px;
+                }
+                .text-h1{
+                    font-size: 19px;
+                }
+                button{
+                    padding: 3px 10px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            .text2{
+                position: absolute;
+                .text-h3{
+                    font-size: 15px;
+                }
+                .text-h1{
+                    font-size: 19px;
+                }
+                button{
+                    padding: 3px 10px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            
+        }
+        
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }
