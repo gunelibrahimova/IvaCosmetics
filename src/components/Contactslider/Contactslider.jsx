@@ -13,62 +13,62 @@ export default function Contactslider() {
             >
                 <SwiperSlide>
                     <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand1.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand1.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand2.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand2.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand3.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand3.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand4.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand4.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand5.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand5.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand6.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand6.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand1.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand1.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand2.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand2.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand3.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand3.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand4.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand4.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand5.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand5.png" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="photo">
-                        <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand6.png" alt="" />
+                        <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/brand6.png" alt="" />
                     </div>
                 </SwiperSlide>
                 

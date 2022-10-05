@@ -60,3 +60,69 @@
         }
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #aboutcosmetics{
+        .top{
+            .image2 {
+                position: relative;
+                text-align: center;    
+                .text {
+                    position: absolute;
+                    top: 20%;
+                    left: 30%;
+                }
+            } 
+        }
+        .box{
+            margin-bottom: 30px;
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) { 
+    #aboutcosmetics{
+        .top{
+            .image2 {
+                position: relative;
+                text-align: center;    
+                .text {
+                    position: absolute;
+                    top: 20%;
+                    left: 38%;
+                }
+            } 
+        }
+        .box{
+            margin-bottom: 30px;
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) { 
+    #aboutcosmetics{
+        .top{
+            .image2 {
+                position: relative;
+                text-align: center;    
+                .text {
+                    position: absolute;
+                    top: 20%;
+                    left: 38%;
+                }
+            } 
+        }
+        .box{
+            margin-bottom: 30px;
+        }
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }

@@ -10,11 +10,8 @@
             opacity: 0.6;
             z-index: -111;
             height: 100%;
-            
-
         }
     }
-
     .top {
         padding-top: 40px;
         .image2 {
@@ -25,7 +22,6 @@
                 width: 130px;
                 height: 130px;
             }
-
             .text {
                 position: absolute;
                 top: 20%;
@@ -117,7 +113,65 @@
                     color: #ED1B6F;
                 }
             }
-
         }
     }
 }
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #contactBody{
+        .top {
+            .image2 {
+                position: relative;
+                .text {
+                    position: absolute;
+                    top: 20%;
+                    left: 30%;
+                    transform: translateX(-50%, -50%);
+    
+                   
+                }
+            }
+        }
+        .bottom{
+            padding: 30px;
+            width: 90%;
+            margin: auto;
+            .left{
+                display: none;
+            }
+            input{
+                padding: 20px 100px 20px 20px;
+            }
+            button{
+                padding: 20px 120px;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    .bottom{
+        .left{
+            display: none;
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) { 
+    .bottom{
+        .left{
+            display: none;
+        }
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }

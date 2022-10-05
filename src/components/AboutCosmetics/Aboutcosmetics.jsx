@@ -75,6 +75,7 @@ const Aboutcosmetics = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

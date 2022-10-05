@@ -1,7 +1,8 @@
-#herbal{
-    .box{
+#herbal {
+    .box {
         padding-bottom: 60px;
     }
+
     .image {
         position: relative;
         text-align: center;
@@ -13,7 +14,7 @@
 
         .text {
             position: absolute;
-            
+
             top: 20%;
             left: 25%;
             transform: translateX(-50%, -50%);
@@ -22,16 +23,19 @@
                 color: rgb(238, 45, 122);
             }
         }
-        .bottomText{
+
+        .bottomText {
             padding-top: 30px;
             width: 80%;
             margin: auto;
             font-family: Poppins, sans-serif;
-            .description{
+
+            .description {
                 color: rgb(163, 163, 163);
                 font-size: 18px;
             }
-            .price{
+
+            .price {
                 font-size: 19px;
             }
 
@@ -39,3 +43,75 @@
     }
 
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    #herbal {
+        .image {
+            margin-top: 20px;
+            position: relative;
+            .text {
+                position: absolute;
+
+                top: 10%;
+                left: 20%;
+                transform: translateX(-50%, -50%);
+
+                h6 {
+                    color: rgb(238, 45, 122);
+                }
+            }
+
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+    #herbal {
+        .image {
+            margin-top: 20px;
+            position: relative;
+            .text {
+                position: absolute;
+
+                top: 10%;
+                left: 30%;
+                transform: translateX(-50%, -50%);
+
+                h6 {
+                    color: rgb(238, 45, 122);
+                }
+            }
+
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    #herbal {
+        .image {
+            margin-top: 20px;
+            position: relative;
+            .text {
+                position: absolute;
+
+                top: 10%;
+                left: 30%;
+                transform: translateX(-50%, -50%);
+
+                h6 {
+                    color: rgb(238, 45, 122);
+                }
+            }
+
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {}

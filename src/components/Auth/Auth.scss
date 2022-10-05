@@ -56,3 +56,49 @@
         }
     }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #authPages{
+        .loginBox{
+            width: 90%;
+            margin: auto;
+            .inputBox{
+                
+                input{
+                    padding: 10px 50px;
+                }
+                p{
+                    font-size: 15px;
+                    color: grey;
+                }
+            }
+            .buttonBox{
+                // text-align: center;
+                button{
+                    padding: 10px 135px;
+                }
+            }
+            .buttonBoxx{
+                // text-align: center;
+                button{
+                    margin-top: 20px;
+                    padding: 10px 85px;
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }

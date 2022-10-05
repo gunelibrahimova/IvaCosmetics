@@ -38,3 +38,40 @@
         
     }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #footer{
+        padding: 10px;
+        .box{
+            display: none;
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    #footer{
+        padding: 10px;
+        .box{
+            display: none;
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) { 
+    #footer{
+        padding: 10px;
+        .box{
+            display: none;
+        }
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }

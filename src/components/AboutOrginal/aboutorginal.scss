@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     position: relative;
     opacity: 0.6;
     background-color: #FAE4E1;
@@ -60,3 +60,33 @@
         }
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #aboutoriginal{
+        position: relative;
+        margin-bottom: 0px;
+        height: 500px;
+        .box{
+            position: absolute;
+            padding-top: 5%;
+            .bottom{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }

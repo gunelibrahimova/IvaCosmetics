@@ -13,7 +13,7 @@
         }
 
         h1 {
-            font-size:55px;
+            font-size: 55px;
             padding-bottom: 15px;
 
             span {
@@ -29,10 +29,87 @@
             padding: 13px 40px;
             font-weight: 500;
             transition: 0.3s ease-in-out;
-            &:hover{
+
+            &:hover {
                 color: white;
                 background-color: #EE2D7A;
             }
         }
     }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    #nature {
+        .image {
+            img {
+                width: 200px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        .text {
+            width: 100%;
+            margin: auto;
+
+            h1 {
+                font-size: 30px;
+                padding-bottom: 15px;
+
+                span {
+                    color: #EE2D7A;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+    #nature {
+        .image {
+            img {
+                width: 200px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        .text {
+            padding-top: 60px;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    #nature {
+        .image {
+            img {
+                width: 200px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        .text {
+            padding-top: 70px;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {}

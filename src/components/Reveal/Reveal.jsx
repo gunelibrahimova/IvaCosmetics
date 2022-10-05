@@ -54,7 +54,7 @@ const Reveal = () => {
                         {
                             products &&
                             products.filter(x => x.isSale).map((product) => (
-                                <div className="col-lg-3 box">
+                                <div className="col-lg-3 col-md-6 box">
                                     <Link to={'/product/' + product.id}>
                                         <div className="images">
                                             <img className='mainImage' src={`${FILE_PATH}${product.coverPhoto}`} alt="" />

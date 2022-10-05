@@ -30,15 +30,6 @@ const BlogDetailBody = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     const [product, setProducts] = useState([]);
-    const [photo, setPhoto] = useState([]);
-    const [count, setCounter] = useState(1);
-    const [userName, setUserName] = useState("");
-    const [review, setReview] = useState("");
-    const [email, setEmail] = useState("");
-    const stars = Array(5).fill(0);
-    const [currentValue, setCurrentValue] = useState(0);
-    const [hoverValue, setHoverValue] = useState(undefined);
-    const [value, setValue] = useState("1");
     const { cartItems } = useSelector((state) => state.cart);
     const { favoriesItems } = useSelector((state) => state.favories);
     const { products } = useSelector((state) => state.products);
@@ -55,115 +46,6 @@ const BlogDetailBody = () => {
         getBlogs();
     }, []);
 
-    const notify = () =>
-        toast(
-            <Link to="/cart" style={{ textDecoration: "none" }}>
-                "Product added to cart !"
-            </Link>
-        );
-    const notifyF = () =>
-        toast(
-            <Link to="/wishlist" style={{ textDecoration: "none", zIndex: "9999999999999999" }}>
-                "Product added to wishlist !"
-            </Link>
-        );
-
-    const addToCartHadler = (id, name) => {
-        var myCart = cartItems.find((e) => e.id === id);
-        if (myCart) {
-            dispatch(addToCartAction(id, myCart.quantity + 1));
-        } else {
-            dispatch(addToCartAction(id, 1));
-        }
-    };
-
-    const addToCartHandler = (id, name) => {
-        var myCart = favoriesItems.find((e) => e.id === id);
-        if (myCart) {
-            dispatch(addToFavoriesAction(id, myCart.quantity + 1));
-        } else {
-            dispatch(addToFavoriesAction(id, 1));
-        }
-    };
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-    const handleClick = (value) => {
-        setCurrentValue(value);
-    };
-    const handleMouseOver = (value) => {
-        setHoverValue(value);
-    };
-    const handleMouseLeave = (value) => {
-        setHoverValue(undefined);
-    };
-    const postComment = async () => {
-        fetch(BASE_URL + "Comment/addcomment", {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify({
-                userName: userName,
-                userEmail: email,
-                review: review,
-                ratings: currentValue,
-                productId: id,
-            }),
-        });
-    };
-
-    var starCount = product.rating;
-    var test = [
-        <StarOutlineIcon />,
-        <StarOutlineIcon />,
-        <StarOutlineIcon />,
-        <StarOutlineIcon />,
-        <StarOutlineIcon />,
-    ];
-
-    for (let index = 0; index < 5; index++) {
-        if (starCount % 1 != 0) {
-            starCount -= starCount % 1;
-        }
-        if (index < starCount) {
-            test[index] = <StarIcon />;
-        } else {
-            if (product.rating % 1 == 0) {
-                break;
-            }
-            if (index == starCount) {
-                test[index] = <StarHalfIcon />;
-                break;
-            }
-        }
-    }
-    const reviewStar = (stars) => {
-        var star = [
-            <StarOutlineIcon />,
-            <StarOutlineIcon />,
-            <StarOutlineIcon />,
-            <StarOutlineIcon />,
-            <StarOutlineIcon />,
-        ];
-
-        for (let i = 0; i < stars; i++) {
-            star[i] = <StarIcon style={{ color: "#FFBA5A" }} />;
-        }
-
-        return <>{star.map((e) => e)}</>;
-    };
-    const getProducts = async () => {
-        await fetch(BASE_URL + "product/getbyid/" + id)
-            .then((res) => res.json())
-            .then((data) => setProducts(data.message));
-    };
-
-
-
-
     return (
         <div id='BlogDetailBody'>
             <div className="container">
@@ -178,7 +60,7 @@ const BlogDetailBody = () => {
                                 </div>
                                 <Link to={"/blogdetail/" + blog.id}>
                                     <div className="image">
-                                        <img src={blog.picture} alt="" />
+                                        <img width="100%" src={blog.picture} alt="" />
                                     </div>
                                 </Link>
 
@@ -200,135 +82,17 @@ const BlogDetailBody = () => {
                                             <div className="col-lg-6"><p>Pellentesque dignissim lorem ac euismod faucibus. Proin in sapien non ante consequat dapibus id ut augue. Morbi non ornare risus. Pellentesque commodo velit euismod nibh placerat, non posuere mauris mollis. Suspendisse id gravida dolor. Aenean consequat vehicula sapien, eget blandit orci euismod commodo. Integer odio libero, accumsan vel accumsan ac, porttitor id ligula. Phasellus eu finibus odio. Interdum et</p></div>
                                         </div>
                                     </div>
-                                    <div id="comment">
-                                        <div className="container">
-                                            <div className="top">
-                                                <div className="row">
-                                                    <div className="col-lg-8">
-                                                        <div className="add">
-                                                            <div className="d-flex">
-                                                                <div className="admin">
-                                                                    {product.comments &&
-                                                                        product.comments.map((comment) => (
-                                                                            <div key={comment.userEmail}>
-                                                                                <h6 className="date">
-                                                                                    {comment.userName} - {comment.userEmail}
-                                                                                </h6>
-                                                                                <p className="light">
-                                                                                    Your review : {comment.review}
-                                                                                </p>
-                                                                                <p>
-                                                                                    Your rating :{reviewStar(comment.ratings)}
-                                                                                </p>
-                                                                                <hr />
-                                                                            </div>
-                                                                        ))}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="bottom">
-                                                <div class="comment-title">
-                                                    <h2>Add a review</h2>
-                                                </div>
-                                                <div class="comment-input-box">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="comment-input">
-                                                                <input
-                                                                    width="100%"
-                                                                    onChange={(e) => setUserName(e.target.value)}
-                                                                    type="text"
-                                                                    placeholder="Name"
-                                                                    required
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="comment-input">
-                                                                <input
-                                                                    onChange={(e) => setEmail(e.target.value)}
-                                                                    type="email"
-                                                                    placeholder="Email"
-                                                                    required
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <textarea
-                                                                onChange={(e) => setReview(e.target.value)}
-                                                                placeholder="Your review"
-                                                                class="comment-input comment-textarea"
-                                                            ></textarea>
-                                                        </div>
-                                                        <div class="comment-rating">
-                                                            <div className="d-flex">
-                                                                <span>Your rating : </span>
-                                                                <div style={styles.containerr}>
-                                                                    <div style={styles.stars}>
-                                                                        {stars.map((_, index) => {
-                                                                            return (
-                                                                                <FaStar
-                                                                                    key={index}
-                                                                                    size={15}
-                                                                                    style={{
-                                                                                        marginRight: 10,
-                                                                                        cursor: "pointer",
-                                                                                    }}
-                                                                                    color={
-                                                                                        (hoverValue || currentValue) > index
-                                                                                            ? colors.orange
-                                                                                            : colors.grey
-                                                                                    }
-                                                                                    onClick={() => handleClick(index + 1)}
-                                                                                    onMouseOver={() =>
-                                                                                        handleMouseOver(index + 1)
-                                                                                    }
-                                                                                    onMouseLeave={handleMouseLeave}
-                                                                                />
-                                                                            );
-                                                                        })}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="comment-submit">
-                                                                <button
-                                                                    onClick={(e) => postComment()}
-                                                                    type="submit"
-                                                                    class="cart-btn"
-                                                                >
-                                                                    Post comment
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </>
                         ))
                     }
-
-
-
                 </div>
             </div>
         </div>
     )
 }
 
-const styles = {
-    containerr: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-    },
-};
+
 
 export default BlogDetailBody

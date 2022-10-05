@@ -217,10 +217,130 @@
  }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {  }
+@media(min-width: 576px) and (max-width: 768px)  { 
+    #slider{
+        height: 40vh;
+        .image{
+            img{
+                position: relative;
+                
+            }
+            .text{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+            }
+            .text1{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            .text2{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            
+        }
+        
+    }
+ }
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 992px) {  }
+@media(min-width: 768px) and (max-width: 992px) { 
+    #slider{
+        height: 40vh;
+        .image{
+            img{
+                position: relative;
+                
+            }
+            .text{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+            }
+            .text1{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            .text2{
+                position: absolute;
+                .text-h3{
+                    font-size: 30px;
+                }
+                .text-h1{
+                    font-size: 32px;
+                }
+                button{
+                    padding: 5px 20px;
+                }
+                p{
+                    display: none;
+                }
+                .res-image{
+                    display: none;
+                }
+            }
+            
+        }
+        
+    }
+ }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (max-width: 1200px) {  }
