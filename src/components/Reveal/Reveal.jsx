@@ -16,6 +16,8 @@ const Reveal = () => {
     const { favoriesItems } = useSelector((state) => state.favories)
     const dispatch = useDispatch();
 
+    console.log(products)
+
     const addToCartHadler = (id, name) => {
         var myCart = cartItems.find(e => e.id === id)
         if (myCart) {
@@ -61,7 +63,7 @@ const Reveal = () => {
 
                                             <div className="image">
 
-                                                <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/Product-Images-jpeg-01.jpg" alt="" />
+                                                <img width="100%" src={product.secondPhoto} alt="" />
                                             </div>
                                         </div>
                                     </Link>

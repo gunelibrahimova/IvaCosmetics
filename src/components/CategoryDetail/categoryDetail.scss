@@ -1,0 +1,194 @@
+#categorydetail {
+  .top {
+    background-image: url("http://dtiva.wpengine.com/wp-content/uploads/2020/05/breadcrumb-1.jpg");
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0.6;
+    background-color: #fae4e1;
+    .box {
+      padding-top: 100px;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 500px;
+      text-align: center;
+      .image {
+        width: 10%;
+        margin: auto;
+        p {
+          color: black;
+          font-size: 16px;
+          opacity: 1;
+          margin-top: 20px;
+        }
+      }
+      .bottom {
+        width: 60%;
+        margin: auto;
+        h1 {
+          color: black;
+          font-size: 60px;
+        }
+        p {
+          margin-top: 40px;
+          color: black;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .boxes {
+    margin-bottom: 50px;
+    .box {
+        overflow: hidden;
+        position: relative;
+        padding: 10px;
+        .mainImage {
+            width: 350px;
+            transform: translateX(0px);
+            transition: 0.3s ease-in-out;
+            vertical-align: middle;
+        }
+
+        .image {
+            img {
+                width: 350px;
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                top: 0%;
+                left: 0%;
+                transform: translateX(300px);
+                transition: 0.3s ease-in-out;
+                vertical-align: middle;
+            }
+        }
+        .sale{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #77A464;
+            padding: 3px 10px;
+            color: white;
+        }
+        .icons{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            i{
+                margin-left: 7px;
+                font-size: 20px;
+                color: white;
+                background-color: #EE2D7A;
+                padding: 5px;
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .text{
+            text-align: center;
+            i{
+                color: #E6B800;
+            }
+            .parag1{
+                font-size: 23px;
+                font-weight: 400;
+            }
+            .parag2{
+                font-size: 18px;
+                .outline{
+                    margin-right: 10px;
+                }
+            }
+        }
+        &:hover {
+            border: 1px solid rgb(238, 45, 122);
+            .icons{
+                i{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+            }
+            .mainImage {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-300px);
+            }
+            .image {
+                img {
+                    transform: translateX(0px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            }
+        }
+    }
+}
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 40%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 20%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 20%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}

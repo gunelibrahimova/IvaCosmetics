@@ -1,46 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./billingDetails.scss";
 
 const BillingDetails = () => {
   return (
-    <div>
-      <div id="billingdetails">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-7 col-12 bottom">
-              <h2>Billing Details</h2>
-              <input type="text" placeholder="First name" /> <br />
-              <input type="text" placeholder="Last name" /> <br />
-              <input type="text" placeholder="Your email" /> <br />
-              <input type="text" placeholder="Your phone" /> <br />
-              <input type="text" placeholder="Address" />
-            </div>
-            <div className="col-lg-5">
-              <div className="cart_totals">
-                <h3>YOUR ORDER</h3>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Product</th>
-                      <td>Hydrating Camo Concealer</td>
-                    </tr>
-                    <tr>
-                      <th>SubTotal</th>
-                      <td>£147.00</td>
-                    </tr>
-                    <tr>
-                      <th>Total</th>
-                      <td style={{ fontWeight: "700" }}>£147.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <button>Place Order</button>
+    <div id="contactt">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-12 m-auto">
+          <div className="card p-3">
+            <div className="card-body">
+              <div className="row">
+                <svg
+                  width="48"
+                  height="51"
+                  viewBox="0 0 48 51"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M37.09 15.408c9.689.241 11.289 5.083 10.65 10.986l-1.823 14.892c-.51 4.864-2.26 8.86-12.027 8.86H19.31c-9.768 0-11.517-3.996-12.027-8.86L5.46 26.394c-.626-5.785.898-10.551 10.08-10.966v-2.064c0-4.107 4.334-8.14 9.721-8.523 6.416-.475 11.827 3.376 11.827 8.176v2.391z"
+                    fill="url(#a)"
+                    fill-opacity=".5"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.25 2.002c3.084-.306 5.838.324 7.792 1.71 1.876 1.332 3.092 3.41 3.151 6.258l-.248-.001H12.28c.344-4.549 4.078-7.5 8.967-7.967h.004zm-10.906 8.043C10.66 4.186 15.457.62 21.063.085c3.427-.34 6.675.34 9.094 2.057 2.416 1.714 3.924 4.409 3.964 7.905 4.073.307 6.78 1.515 8.414 3.5 1.894 2.3 2.123 5.383 1.787 8.484l-.001.013-1.822 14.884c-.261 2.487-.858 4.998-2.842 6.85-1.982 1.85-5.155 2.864-10.142 2.864H14.936c-4.986 0-8.16-1.015-10.142-2.865-1.984-1.851-2.58-4.362-2.842-6.85L.13 22.045l-.002-.013c-.336-3.1-.107-6.184 1.787-8.485 1.636-1.986 4.348-3.195 8.428-3.5zm-8.3 11.772l1.821 14.885.002.016c.249 2.374.783 4.29 2.241 5.651 1.462 1.364 4.047 2.347 8.828 2.347h14.579c4.781 0 7.366-.983 8.828-2.347 1.458-1.36 1.992-3.277 2.241-5.65l.002-.017 1.822-14.885c.319-2.953.025-5.365-1.36-7.046-1.372-1.666-4.034-2.876-9.103-2.876H12.506c-5.068 0-7.731 1.21-9.103 2.876-1.384 1.681-1.679 4.093-1.36 7.046zm11.425 6.489c0-4.97 3.94-8.965 8.756-8.965 4.817 0 8.756 3.994 8.756 8.965 0 4.97-3.939 8.964-8.756 8.964-4.816 0-8.756-3.994-8.756-8.964zm8.756-10.892c-5.918 0-10.682 4.896-10.682 10.892 0 5.995 4.764 10.89 10.682 10.89 5.92 0 10.683-4.895 10.683-10.89 0-5.996-4.764-10.892-10.683-10.892zm4.452 9.16a.963.963 0 1 0-1.32-1.402l-4.325 4.072-.016.015-.013.012a.169.169 0 0 1-.13.052.246.246 0 0 1-.17-.077l-1.579-1.613a.963.963 0 0 0-1.377 1.347l1.58 1.614c.808.825 2.171.908 3.037.04l4.313-4.06z"
+                    fill="#596873"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id="a"
+                      x1="5.338"
+                      y1="49.154"
+                      x2="46.438"
+                      y2=".87"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#FFF7B4"></stop>
+                      <stop offset="1" stop-color="#2BDBF3"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <h4>Your order is complete.</h4>
+                <p>We will contact you shortly.</p>
+
+                <div className="buttonBox">
+                  <Link to="/">
+                    <button>
+                      <span>Home</span>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 

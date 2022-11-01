@@ -36,7 +36,7 @@ const BlogDetailBody = () => {
 
 
     const getBlogs = async () => {
-        await fetch(BASE_URL + "blog/getbyid/" + id)
+        await fetch(BASE_URL + "Blog/getbyid/" + id)
             .then((res) => res.json())
             .then((data) => setProducts(data.message));
     };
@@ -50,24 +50,22 @@ const BlogDetailBody = () => {
         <div id='BlogDetailBody'>
             <div className="container">
                 <div className="boxes">
-                    {
-                        blogs &&
-                        blogs.map((blog) => (
+                    
                             <>
                                 <div className='user'>
                                     <i class="fa-solid fa-user"></i>
                                     <span>Ram</span>
                                 </div>
-                                <Link to={"/blogdetail/" + blog.id}>
+                                <Link to={"/blogdetail/" + product.id}>
                                     <div className="image">
-                                        <img width="100%" src={blog.picture} alt="" />
+                                        <img width="100%" src={product.picture} alt="" />
                                     </div>
                                 </Link>
 
                                 <div className="box">
                                     <div className="big-text">
-                                        <h2>{blog.tags}</h2>
-                                        <p>{blog.style}</p>
+                                        <h2>{product.tags}</h2>
+                                        <p>{product.style}</p>
                                     </div>
                                     <div className="image-box">
                                         <div className="row">
@@ -85,8 +83,7 @@ const BlogDetailBody = () => {
                                     
                                 </div>
                             </>
-                        ))
-                    }
+                      
                 </div>
             </div>
         </div>

@@ -66,7 +66,7 @@ const WishList = () => {
               <tr>
                 <th>Photo</th>
                 <th>Product Name</th>
-                <th>Price</th>
+                <th className='dnone'>Price</th>
                 {/* <th>Hərəkət</th> */}
               </tr>
 
@@ -77,7 +77,7 @@ const WishList = () => {
                       <img width="80px" src={`${FILE_PATH}${product.img}`} alt="" />
                     </td>
                     <td>{product.name}</td>
-                    <td>{product.price}₼</td>
+                    <td className='dnone'>{product.price}₼</td>
                     <td>
                       <div className="d-flex">
                         <div className="icon">
@@ -106,7 +106,7 @@ const WishList = () => {
                       style={{ textDecoration: "none", color: "white" }}
                     >
                       <button className="shoppingButton">
-                        Davam edin
+                        Continue to shopping
                       </button>
                     </Link>
                   </div>

@@ -98,8 +98,8 @@ function Cart() {
                 <th>Photo</th>
                 <th>Product Name</th>
                 <th>Count</th>
-                <th>Price</th>
-                <th>Total Price</th>
+                <th className="dnone">Price</th>
+                <th className="dnone">Total Price</th>
               </tr>
 
               {cartItems.length > 0 ?
@@ -107,21 +107,21 @@ function Cart() {
                   <tr>
                     <td>
                       <img
-                        width="150px"
+                        
                         src={`${FILE_PATH}${product.img}`}
                         alt=""
                       />
                     </td>
                     <td>{product.name}</td>
-                    <td>{product.quantity} ədəd</td>
-                    <td>{product.price}£</td>
+                    <td className="dnone">{product.quantity}</td>
+                    <td className="dnone">{product.price}£</td>
                     <td>
                       {product.price * product.quantity}£
                     </td>
                   </tr>
 
                 )) : (
-                  "Mehsul yoxdur"
+                  "No products added to the wishlist"
                 )
               }
             </table>

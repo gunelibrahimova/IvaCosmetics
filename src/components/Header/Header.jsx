@@ -41,7 +41,10 @@ const Header = () => {
       <div className="container">
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-2 res-image">
-            <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/logo.png" alt="" />
+            <Link to="/">
+              <img src="https://dtiva.wpengine.com/wp-content/uploads/2020/04/logo.png" alt="" />
+
+            </Link>
           </div>
           <div className="col-lg-5 res-header">
             <ul className='list-unstyled d-flex'>

@@ -13,6 +13,8 @@ import WishListPages from '../Pages/WishListPages'
 import Account from '../components/Account/Account'
 import Shop from '../components/Shop/Shop'
 import BlogDetail from '../Pages/BlogDetail'
+import CategoryDetail from '../components/CategoryDetail/CategoryDetail'
+import ButonPage from '../components/Button/ButonPage'
 
 
 
@@ -31,6 +33,8 @@ const MyRouter = () => {
       <Route path='/checkout' element={<CheckOutPage />}/>
       <Route path='/account' element={<Account />} />
       <Route path='/shop' element={<Shop />} />
+      <Route path='/buton' element={<ButonPage />} />
+      <Route path='/category/:id' element={<CategoryDetail />} />
       <Route path='/blogdetail:id' element={<BlogDetail />} />
 
     </Routes>

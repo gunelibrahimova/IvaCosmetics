@@ -245,9 +245,7 @@ const ProductDetailBody = () => {
               <p class="sku_wrapper">
                 SKU: <span>{product.sku}</span>
               </p>
-              <p class="tagged_as">
-                Brand: <span>{product.brand}</span>
-              </p>
+              
             </div>{" "}
             <hr />
             <div
@@ -409,7 +407,7 @@ const ProductDetailBody = () => {
                     <div className="row">
                         {
                             products &&
-                            products.filter(x => x.isSale).map((product) => (
+                            products.filter((x) => x.categoryName == product.categoryName).map((product) => (
 
                                 <div className="col-lg-3 col-md-6 box">
                                     <Link to={'/product/' + product.id}>
@@ -418,7 +416,7 @@ const ProductDetailBody = () => {
 
                                             <div className="image">
 
-                                                <img width="100%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/Product-Images-jpeg-01.jpg" alt="" />
+                                            <img width="100%" src={product.secondPhoto} alt="" />
                                             </div>
                                         </div>
                                     </Link>

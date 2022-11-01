@@ -72,7 +72,9 @@ const Shop = () => {
                                     categories &&
                                     categories.map((cat) => (
                                         <div key={cat.id}>
-                                            <p>{cat.name}</p>
+                                            <Link style={{textDecoration:"none",color: "black"}} to={"/category/" + cat.id}>
+                                            <p >{cat.name}</p>
+                                            </Link>
                                         </div>
                                     ))
                                 }
@@ -108,45 +110,8 @@ const Shop = () => {
                                     />
                                     Your range of Price is between £ {value[0]} - £ {value[1]}
                                 </div>
-                                <button>Filter</button>
-                            </div>
-                            <div className="box3">
-                                <h3>Shop By Size</h3>
-                                <div className="smallBox d-flex align-items-center  justify-content-center">
-                                    <div className="col-lg-8">
-                                        <h6>Myst Spray</h6>
-                                        <p><del>£40.00</del> £28.00</p>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <div className="image">
-                                            <img width="40%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/shop-58.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="smallBox d-flex align-items-center  justify-content-center">
-                                    <div className="col-lg-8">
-                                        <h6>Texas Primer</h6>
-                                        <p><del>£40.00</del> £28.00</p>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <div className="image">
-                                            <img width="40%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/shop-58.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div><div className="smallBox d-flex align-items-center  justify-content-center">
-                                    <div className="col-lg-8">
-                                        <h6>BB Cream</h6>
-                                        <p><del>£40.00</del> £28.00</p>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <div className="image">
-                                            <img width="40%" src="https://dtiva.wpengine.com/wp-content/uploads/2020/05/shop-58.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
+                                
+                                <button><Link to="/buton">Filter</Link></button>
                             </div>
 
                         </div>

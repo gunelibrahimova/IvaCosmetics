@@ -33,7 +33,7 @@ const Recent = () => {
                             blogs &&
                             blogs.map((blog) => (
                                 <div className="col-lg-4">
-                                    <Link to={'/blogdetail' + blog.id}>
+                                    <Link to={"/blogdetail" + blog.id}>
                                     <div className="image">
                                         <img width="100%" src={blog.picture} alt="" />
                                     </div>

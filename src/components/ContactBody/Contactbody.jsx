@@ -1,7 +1,46 @@
 import React from 'react'
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import './contactbody.scss'
+import { BASE_URL } from "./../../api/config";
 
 const Contactbody = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
+
+  const notify = () =>
+    toast(
+      <Link to={'/contact'} style={{ textDecoration: "none", zIndex: "9999999999999999" }}>
+      
+    </Link>
+    );
+
+  const postData = async () => {
+    fetch(`${BASE_URL}contact/add`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userName: name,
+        userEmail: email,
+        userPhone: phone,
+        message: message
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+  };
+
   return (
     <div id='contactBody'>
       <div className="image">
@@ -20,12 +59,13 @@ const Contactbody = () => {
         <div className=" row">
           <div className="col-lg-7 col-12 bottom">
             <h2>Write to us</h2>
-            <input type="text" placeholder='Name'/> <br />
-            <input type="text" placeholder='Email' /> <br />
-            <input type="text" placeholder='Phone' /> <br />
-            <input type="text" placeholder='Message' />
+            <input type="text" placeholder='Your name' onChange={(e) => setName(e.target.value)}/> <br />
+            <input type="text" placeholder='Your email' onChange={(e) => setEmail(e.target.value)}/> <br />
+            <input type="text" placeholder='Your phone' onChange={(e) => setPhone(e.target.value)}/> <br />
+            <input type="text" placeholder='Message' onChange={(e) => setMessage(e.target.value)}/>
 
-            <button>Submit</button>
+            <button onClick={() => {postData(); notify();}}>Submit</button>
+
 
             <div className="left">
               <h3>Contact Info</h3>
@@ -43,6 +83,20 @@ const Contactbody = () => {
         </div>
 
       </div>
+
+      <ToastContainer
+        limit={3}
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
     </div>
   )
 }
