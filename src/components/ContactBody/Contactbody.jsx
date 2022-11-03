@@ -17,7 +17,7 @@ const Contactbody = () => {
   const notify = () =>
     toast(
       <Link to={'/contact'} style={{ textDecoration: "none", zIndex: "9999999999999999" }}>
-      
+      "We will answer your question via email or phone number!"
     </Link>
     );
 
@@ -60,7 +60,7 @@ const Contactbody = () => {
           <div className="col-lg-7 col-12 bottom">
             <h2>Write to us</h2>
             <input type="text" placeholder='Your name' onChange={(e) => setName(e.target.value)}/> <br />
-            <input type="text" placeholder='Your email' onChange={(e) => setEmail(e.target.value)}/> <br />
+            <input type="email" placeholder='Your email' onChange={(e) => setEmail(e.target.value)}/> <br />
             <input type="text" placeholder='Your phone' onChange={(e) => setPhone(e.target.value)}/> <br />
             <input type="text" placeholder='Message' onChange={(e) => setMessage(e.target.value)}/>
 

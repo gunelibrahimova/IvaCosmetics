@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './cart.scss'
 import Swal from "sweetalert2";
-import { removeAllCartAction } from "../../redux/Actions/CartAction";
+import { removeAllCartAction, removeFromFavories } from "../../redux/Actions/CartAction";
 import { getUserAction } from "../../redux/Actions/UserAction";
 import { CheckOutAction } from "./../../redux/Actions/CheckOutAction";
 import { Link, useNavigate } from "react-router-dom";
@@ -82,6 +82,11 @@ function Cart() {
     setTotalPrice(price);
   };
 
+  const removeFromFavoriesHandler = (id) => {
+    dispach(removeFromFavories(id));
+  }
+
+
   useEffect(() => {
     countTotal();
     dispach(getUserAction());
@@ -118,10 +123,18 @@ function Cart() {
                     <td>
                       {product.price * product.quantity}£
                     </td>
+                    <td>
+                      <div className="d-flex">
+                        
+                        <div className="icon1" onClick={() => removeFromFavoriesHandler(product.product)}>
+                          <i class="fa fa-times"></i>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
 
                 )) : (
-                  "No products added to the wishlist"
+                  "No products added to the cart"
                 )
               }
             </table>

@@ -77,7 +77,6 @@ const Reveal = () => {
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </div>
                                     <div className="text">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                         <p className='parag1'>{product.name}</p>
                                         <p className='parag2'> <s className='outline'>£{product.price}</s>£{product.salePrice}</p>
                                     </div>

@@ -15,6 +15,7 @@ import Shop from '../components/Shop/Shop'
 import BlogDetail from '../Pages/BlogDetail'
 import CategoryDetail from '../components/CategoryDetail/CategoryDetail'
 import ButonPage from '../components/Button/ButonPage'
+import NotFound from '../components/NotFound/NotFound'
 
 
 
@@ -36,6 +37,7 @@ const MyRouter = () => {
       <Route path='/buton' element={<ButonPage />} />
       <Route path='/category/:id' element={<CategoryDetail />} />
       <Route path='/blogdetail:id' element={<BlogDetail />} />
+      <Route path='*' element={<NotFound />} />
 
     </Routes>
   )

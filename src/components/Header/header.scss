@@ -1,4 +1,55 @@
-#header {
+#navbar{
+  .side{
+   opacity: 0;
+   visibility: hidden;
+   z-index: 100000;
+    #page-wrap {
+      text-align: center;
+      overflow: auto;
+    }
+    .bm-item {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      
+    }
+    .bm-burger-button {
+      position: absolute;
+      width: 22px;
+      height: 18px;
+      left: 100px;
+      top: 36px;
+    }
+    .bm-burger-bars {
+      background: #373a47;
+    }
+    .bm-cross-button {
+      height: 24px;
+      width: 24px;
+    }
+    .bm-cross {
+      background: #bdc3c7;
+    }
+    .bm-menu {
+      background: #ffffff;
+      padding: 2.5em 1.5em 0;
+      font-size: 1.15em;
+    }
+    .bm-morph-shape {
+      fill: #373a47;
+    }
+    .bm-item-list {
+      color: #b8b7ad;
+    }
+    .bm-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  #header {
     font-family: Poppins, 'Poppins', sans-serif;
     background-color: white;
     padding: 20px;
@@ -211,105 +262,185 @@
       }
   }
 }
+}
+
 
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) { 
-  #header{
-    .res-header{
-      display: none;
-    }
-    .res-image{
-      margin-bottom: 15px;
-    }
-    .user{
-      width: 70%;
-      margin: auto;
-      margin-top: 15px;
-      i{
-        font-size: 25px;
+  #navbar{
+    .side{
+      opacity: 1;
+      visibility: visible;
+      .bm-burger-button{
+        margin-left: 200px;
+
       }
-      .hoverBox {
-        position: relative;
-        cursor: pointer;
-        &:hover{
-            .hoverTextBox{
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        
-        .hoverTextBox {
-            position: absolute;
-            padding: 10px 200px 10px 10px;
-            top: 100%;
-            left: 0%;
-            background-color: white;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            color: grey;
-            border-radius: 5px;
-            z-index: 99999;
-            opacity: 0;
-            visibility: hidden;
-            .text{
-                font-size: 12px;
-                width: 100%;
-            }
-            .buttonBoxx {
-                padding-bottom: 10px;
-                button {
-                    padding: 5px 40px;
-                    border: none;
-                    background-color: white;
-                    
-                    border: 1px solid #EE2D7A;
-                    border-radius: 5px;
-                    a{
-                        text-decoration: none;
-                        color: #EE2D7A;
-                    }
-                }
-            }
-            .buttonBox {
-                padding-bottom: 10px;
-                button {
-                    padding: 5px 59px;
-                    border: none;
-                    background-color: #EE2D7A;
-                    color: white;
-                    border-radius: 5px;
-                    a{
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
-    .cart {
-      &:hover {
-        .box {
-          visibility: none;
-          opacity: 0;
-          margin-top: 0px;
-        }
-      }
-    }
       
     }
-    .search{
-      width: 80%;
-      margin: auto;
+    #header{
+      .res-header{
+        display: none;
+      }
+      .res-image{
+        margin-bottom: 15px;
+      }
+      .user{
+        width: 70%;
+        margin: auto;
+        margin-top: 15px;
+        i{
+          font-size: 25px;
+        }
+        .hoverBox {
+          position: relative;
+          cursor: pointer;
+          &:hover{
+              .hoverTextBox{
+                  opacity: 1;
+                  visibility: visible;
+              }
+          }
+          
+          .hoverTextBox {
+              position: absolute;
+              padding: 10px 200px 10px 10px;
+              top: 100%;
+              left: 0%;
+              background-color: white;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              color: grey;
+              border-radius: 5px;
+              z-index: 99999;
+              opacity: 0;
+              visibility: hidden;
+              .text{
+                  font-size: 12px;
+                  width: 100%;
+              }
+              .buttonBoxx {
+                  padding-bottom: 10px;
+                  button {
+                      padding: 5px 40px;
+                      border: none;
+                      background-color: white;
+                      
+                      border: 1px solid #EE2D7A;
+                      border-radius: 5px;
+                      a{
+                          text-decoration: none;
+                          color: #EE2D7A;
+                      }
+                  }
+              }
+              .buttonBox {
+                  padding-bottom: 10px;
+                  button {
+                      padding: 5px 59px;
+                      border: none;
+                      background-color: #EE2D7A;
+                      color: white;
+                      border-radius: 5px;
+                      a{
+                          text-decoration: none;
+                          color: white;
+                      }
+                  }
+              }
+          }
+      }
+      .cart {
+        &:hover {
+          .box {
+            visibility: none;
+            opacity: 0;
+            margin-top: 0px;
+          }
+        }
+      }
+        
+      }
+      .search{
+        width: 70%;
+        margin: auto;
+      }
+  
     }
-
   }
+
  }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {  }
+@media (max-width: 768px) { 
+  #navbar{
+    #header{
+      .res-header{
+        width: 70%;
+        margin: auto;
+        
+        
+      }
+      .search{
+        width: 80%;
+        margin: auto;
+        .search-button{
+          margin-left: 300px;
+        }
+      }
+      .user{
+        // margin-left: 100px;
+        width: 30%;
+        margin: auto;
+        padding-top: 20px;
+        i{
+            padding-left: 35px;
+            // font-size: 22px;
+            // width: 100%;
+            // margin: auto;
+        }
+        
+    }
+        
+      
+    }
+  }
+ }
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 992px) {  }
+@media (max-width: 992px) {
+  #navbar{
+    #header{
+      .res-header{
+        width: 70%;
+        margin: auto;
+        
+        
+      }
+      .search{
+        width: 80%;
+        margin: auto;
+        .search-button{
+          margin-left: 300px;
+        }
+      }
+      .user{
+        // margin-left: 100px;
+        width: 30%;
+        margin: auto;
+        padding-top: 20px;
+        i{
+            padding-left: 35px;
+            // font-size: 22px;
+            // width: 100%;
+            // margin: auto;
+        }
+        
+    }
+        
+      
+    }
+  }
+  }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (max-width: 1200px) {  }

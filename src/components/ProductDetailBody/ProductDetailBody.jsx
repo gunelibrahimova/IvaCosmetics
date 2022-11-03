@@ -201,10 +201,10 @@ const ProductDetailBody = () => {
                 <li>
                   <div className="d-flex">
                     <span>
-                      <del> £{product.salePrice}</del>
+                      <del> £ {product.price}</del>
                     </span>
                     <span style={{ marginLeft: "10px" }}>
-                      £ {product.price}
+                      £  {product.salePrice}
                     </span>
                     {product.isStock == true ? (
                       <div className="stock">

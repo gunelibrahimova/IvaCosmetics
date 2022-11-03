@@ -1,0 +1,69 @@
+#notfound{
+    padding-bottom: 30px;
+    .text{
+        text-align: center;
+        h1{
+            font-size: 22.5rem;
+            line-height: 1.1;
+            font-weight: 400;
+            letter-spacing: 0;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            font-family: "Crimson Text", serif;
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            line-height: 1.2;
+            font-family: "Crimson Text", serif;
+        }
+        button {
+            background-color: transparent;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            margin-top: 30px;
+            transition: 0.3s ease-in-out;
+            border: 1px solid black;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            a{
+                color: black;
+                transition: 0.3s ease-in-out;
+            }
+            &:hover {
+                background-color: black;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {  
+    #notfound{
+        .text{
+            h1{
+                font-size: 12rem;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
