@@ -9,6 +9,8 @@ import { ProductReducers } from "./Reducers/ProductReducer";
 import { UserReducer } from "./Reducers/UserReducer";
 import {SizeReducer} from "./Reducers/SizeReducer"
 import { BlogReducer } from "./Reducers/BlogReducer";
+import { SliderReducer } from "./Reducers/SliderReducer";
+import { NatureReducer } from "./Reducers/NatureReducer";
 
 const {default: thunk} = require("redux-thunk")
 
@@ -22,7 +24,9 @@ const reducer = combineReducers({
     faq : FaqReducer,
     category : CategoryReducer,
     size: SizeReducer,
-    blog : BlogReducer
+    blog : BlogReducer,
+    sliders : SliderReducer,
+    natures : NatureReducer
 })
 
 
@@ -45,7 +49,9 @@ const initialState ={
     faq: [],
     category : [],
     size: [],
-    blog : []
+    blog : [],
+    natures : [],
+    sliders : []
 }
 
 const middleware = [thunk]
